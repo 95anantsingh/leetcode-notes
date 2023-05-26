@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Leetcode Notes'
-copyright = '2022'
+copyright = '2023'
 author = 'Anant Singh'
 
 release = '1.0'
@@ -82,3 +82,55 @@ html_favicon = 'assets/favicon.ico'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# import re
+# def alpha_sort(iterable):
+#         '''
+#         Sorts the given iterable in the way that humans expect, by interpreting alphanumeric strings as integers.
+
+#         Args:
+#             iterable: A sequence (e.g. list, tuple, etc.) to be sorted.
+
+#         Returns:
+#             iterable: A sorted list of items from the input iterable.
+#         '''
+#         if iterable == None:
+#             return None
+#         if len(iterable) == 0:
+#             return iterable
+#         if iterable[0] and not isinstance(iterable[0], str):
+#             return sorted(iterable)
+#         else:
+#             def convert(text): return int(text) if text.isdigit() else text
+#             def alphanum_key(key): return [convert(c)
+#                                            for c in re.split('([0-9]+)', key)]
+#             return sorted(iterable, key=alphanum_key)
+        
+# def sort_by_number(filename):
+#     match = re.match(r'^(\d+)\.', filename)
+#     if match:
+#         return int(match.group(1))
+#     else:
+#         return float('inf')
+
+# def convert(text): return int(text) if text.isdigit() else text
+# def alphanum_key(key): return [convert(c) for c in re.split('([0-9]+)', key)]
+           
+
+# def sort_toc_tree(app, doctree):
+#     if not app.builder.name == 'html':
+#         return
+#     toctrees = doctree.traverse(condition=lambda node: node.tagname=='toctree')
+#     for toctree in toctrees:
+#         entries = toctree.children
+#         with open('entries.log','w') as f:
+#             f.write(f'{entries}')
+#             f.write(f'\n\n{doctree.tagname}')
+#             f.write(f'\n\n{type(entries)}')
+#             # f.write(f'\n\n{type(entries[0])}')
+#             # f.write(f'\n\n{entries[0]}')
+#         # entries.sort(key=lambda e: sort_by_number(e[0].astext()))
+#         entries.sort(key=alphanum_key)
+
+# def setup(app):
+#     app.connect('doctree-read', sort_toc_tree)
