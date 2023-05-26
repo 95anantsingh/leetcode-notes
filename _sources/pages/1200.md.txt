@@ -41,12 +41,12 @@ To reduce the time taken to find the minimum difference we have to sort the arra
 
 ### Approach
 
-- Sort the array
-- Find the minimum difference
-- Find the pairs
+1. Sort the array
+1. Find the minimum difference
+1. Find the pairs
 
 ### Complexity
-- Time complexity: `O(n*log(n))`, 
+- Time complexity: `O(n*log(n))`
 - Space complexity: `O(x)`, where `x` is number of pairs
 
 ### Code

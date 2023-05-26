@@ -39,9 +39,9 @@ Check the outputs for some integers. This is actually a mathematical loop. Take 
 ![loop](../assets/pages/square_digit_sum_cycle.png)
 
 ### Approach
-- Calculate the sum of squared digits until its 4 or 1
-- `return` `False` if its 4
-- `return` `True` if its 1
+1. Calculate the sum of squared digits until its 4 or 1
+1. `return` `False` if its 4
+1. `return` `True` if its 1
 
 
 ### Complexity

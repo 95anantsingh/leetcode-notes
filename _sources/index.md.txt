@@ -1,4 +1,4 @@
-# Getting Started!
+# Leetcode Notes
 
 
 These are my personal notes for Leetcode, I documented these while taking classes at New York University.

@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="202. Happy Number" href="0202.html" />
+    <link rel="next" title="49. Group Anagrams" href="0049.html" />
     <link rel="prev" title="7. Reverse Integer" href="0007.html" /> 
 </head>
 
@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Getting Started!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Leetcode Notes</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="0007.html">7. Reverse Integer</a><ul>
@@ -64,6 +64,17 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="0049.html">49. Group Anagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0049.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0049.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="0202.html">202. Happy Number</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="0202.html#statement">Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="0202.html#solution">Solution</a><ul>
@@ -71,6 +82,17 @@
 <li class="toctree-l3"><a class="reference internal" href="0202.html#approach">Approach</a></li>
 <li class="toctree-l3"><a class="reference internal" href="0202.html#complexity">Complexity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="0202.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="0423.html">423. Reconstruct Original Digits from English</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0423.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0423.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0423.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0423.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0423.html#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0423.html#code">Code</a></li>
 </ul>
 </li>
 </ul>
@@ -153,7 +175,7 @@ Output: false
 </section>
 <section id="approach">
 <h3>Approach<a class="headerlink" href="#approach" title="Permalink to this heading"></a></h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>Maintain a stack to monitor opening parentheses</p></li>
 <li><p>Pop if a matching closing parentheses found</p></li>
 <li><p>Push if an opening parentheses is found</p></li>
@@ -161,7 +183,7 @@ Output: false
 <li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">False</span></code> if stack is not empty after looping over the string</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">False</span></code> if string starts with a closing parentheses</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">False</span></code> if last element of stack (opening parentheses) does not matches to current closing parentheses</p></li>
-</ul>
+</ol>
 </section>
 <section id="complexity">
 <h3>Complexity<a class="headerlink" href="#complexity" title="Permalink to this heading"></a></h3>
@@ -193,7 +215,7 @@ Output: false
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
           <a href="0007.html" class="btn btn-neutral float-left" title="7. Reverse Integer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-          <a href="0202.html" class="btn btn-neutral float-right" title="202. Happy Number" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <a href="0049.html" class="btn btn-neutral float-right" title="49. Group Anagrams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       </div>
   
     <hr/>
