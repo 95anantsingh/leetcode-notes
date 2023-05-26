@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Reverse Integer &mdash; Leetcode Notes 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #282828" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/leetcode-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started!</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #282828" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Leetcode Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">7. Reverse Integer</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reverse-integer">
+<h1>7. Reverse Integer<a class="headerlink" href="#reverse-integer" title="Permalink to this heading"></a></h1>
+<section id="statement">
+<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this heading"></a></h2>
+<p>Given a signed 32-bit integer <code class="docutils literal notranslate"><span class="pre">x</span></code>, return <code class="docutils literal notranslate"><span class="pre">x</span></code> with its digits reversed. If reversing <code class="docutils literal notranslate"><span class="pre">x</span></code> causes the value to go outside the signed 32-bit integer range <code class="docutils literal notranslate"><span class="pre">[-231,</span> <span class="pre">231</span> <span class="pre">-</span> <span class="pre">1]</span></code>, then return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>
+<p><strong>Example 1:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: x = 123
+Output: 321
+</pre></div>
+</div>
+<p><strong>Example 2:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: x = -123
+Output: -321
+</pre></div>
+</div>
+<p><strong>Example 3:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: x = 120
+Output: 21
+</pre></div>
+</div>
+<p><strong>Constraints:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-231</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">231</span> <span class="pre">-</span> <span class="pre">1</span></code></p></li>
+</ul>
+</section>
+<section id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+
+        <span class="n">isnegative</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">isnegative</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span>
+
+        <span class="n">new_num</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">new_num</span> <span class="o">=</span> <span class="n">new_num</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">10</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">10</span>
+
+        <span class="n">new_num</span> <span class="o">=</span> <span class="o">-</span><span class="n">new_num</span> <span class="k">if</span> <span class="n">isnegative</span> <span class="k">else</span> <span class="n">new_num</span>
+
+        <span class="k">if</span> <span class="n">new_num</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="ow">or</span> <span class="n">new_num</span> <span class="o">&gt;</span> <span class="mi">2147483647</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">new_num</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <hr/>
+  
+    <div role="contentinfo">
+      <p><b>Anant Singh</b> (<a href="https://bit.ly/3vbNbbg">GitHub</a>, <a href="https://bit.ly/3cGo2iI">LinkedIn</a>) | New York University</p>
+    </div> 
+  
+  </footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
