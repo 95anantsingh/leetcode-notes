@@ -1,9 +1,0 @@
-- conda activate Python
-- cd docs
-- make html
-
-docs - 
-https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html
-
-mk docs - 
-https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html
