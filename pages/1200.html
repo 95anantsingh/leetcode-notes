@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1200. Minimum Absolute Difference &mdash; Leetcode Notes 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="202. Happy Number" href="0202.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #282828" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/leetcode-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Getting Started!</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0007.html">7. Reverse Integer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0007.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0007.html#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="0020.html">20. Valid Parentheses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0020.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0020.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0020.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0020.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0020.html#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0020.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="0202.html">202. Happy Number</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0202.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0202.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0202.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0202.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0202.html#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0202.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1200. Minimum Absolute Difference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #282828" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Leetcode Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1200. Minimum Absolute Difference</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="minimum-absolute-difference">
+<h1>1200. Minimum Absolute Difference<a class="headerlink" href="#minimum-absolute-difference" title="Permalink to this heading"></a></h1>
+<section id="statement">
+<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this heading"></a></h2>
+<p>Given an array of <strong>distinct</strong> integers <code class="docutils literal notranslate"><span class="pre">arr</span></code>, find all pairs of elements with the minimum absolute difference of any two elements.</p>
+<p>Return a list of pairs in ascending order(with respect to pairs), each pair <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code> follows</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b</span></code> are from <code class="docutils literal notranslate"><span class="pre">arr</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">-</span> <span class="pre">a</span></code> equals to the minimum absolute difference of any two elements in <code class="docutils literal notranslate"><span class="pre">arr</span></code></p></li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: arr = [4,2,1,3]
+Output: [[1,2],[2,3],[3,4]]
+Explanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.
+</pre></div>
+</div>
+<p><strong>Example 2:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: arr = [1,3,6,10,15]
+Output: [[1,3]]
+</pre></div>
+</div>
+<p><strong>Example 3:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: arr = [3,8,-10,23,19,-4,-14,27]
+Output: [[-14,-10],[19,23],[23,27]]
+</pre></div>
+</div>
+<p><strong>Constraints:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">arr.length</span> <span class="pre">&lt;=</span> <span class="pre">10^5</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-10^6</span> <span class="pre">&lt;=</span> <span class="pre">arr[i]</span> <span class="pre">&lt;=</span> <span class="pre">10^6</span></code></p></li>
+</ul>
+</section>
+<section id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading"></a></h2>
+<section id="intuition">
+<h3>Intuition<a class="headerlink" href="#intuition" title="Permalink to this heading"></a></h3>
+<p>To reduce the time taken to find the minimum difference we have to sort the array first and then find the pairs easily.</p>
+</section>
+<section id="approach">
+<h3>Approach<a class="headerlink" href="#approach" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Sort the array</p></li>
+<li><p>Find the minimum difference</p></li>
+<li><p>Find the pairs</p></li>
+</ul>
+</section>
+<section id="complexity">
+<h3>Complexity<a class="headerlink" href="#complexity" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Time complexity: <code class="docutils literal notranslate"><span class="pre">O(n*log(n))</span></code>,</p></li>
+<li><p>Space complexity: <code class="docutils literal notranslate"><span class="pre">O(x)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is number of pairs</p></li>
+</ul>
+</section>
+<section id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">minimumAbsDifference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="n">arr</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">min_dif</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">min_dif</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="n">min_dif</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">r_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">min_dif</span> <span class="o">==</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="n">r_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+
+        <span class="k">return</span> <span class="n">r_arr</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+          <a href="0202.html" class="btn btn-neutral float-left" title="202. Happy Number" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      </div>
+  
+    <hr/>
+  
+    <div role="contentinfo">
+      <p><b>Anant Singh</b> (<a href="https://bit.ly/3vbNbbg">GitHub</a>, <a href="https://bit.ly/3cGo2iI">LinkedIn</a>) | New York University</p>
+    </div> 
+  
+  </footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

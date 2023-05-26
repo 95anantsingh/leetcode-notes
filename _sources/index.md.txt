@@ -23,8 +23,10 @@ self
 ```
 
 ```{toctree}
-:maxdepth: 2
-53. Maximum Subarray
+:maxdepth: 1
+:glob:
+
+pages/*
 ```
 
 
