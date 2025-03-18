@@ -1,27 +1,27 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7. Reverse Integer &mdash; Leetcode Notes 1.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=eb7ae292" />
+
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="20. Valid Parentheses" href="0020.html" />
-    <link rel="prev" title="Leetcode Notes" href="../index.html" /> 
+    <link rel="prev" title="1. Two Sums" href="0001.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,9 +48,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Leetcode Notes</a></li>
 </ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0001.html">1. Two Sums</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0001.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0001.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0001.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0001.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Reverse Integer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#statement">Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#solution">Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="0020.html">20. Valid Parentheses</a><ul>
@@ -134,9 +147,9 @@
            <div itemprop="articleBody">
              
   <section id="reverse-integer">
-<h1>7. Reverse Integer<a class="headerlink" href="#reverse-integer" title="Permalink to this heading"></a></h1>
+<h1>7. Reverse Integer<a class="headerlink" href="#reverse-integer" title="Link to this heading"></a></h1>
 <section id="statement">
-<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this heading"></a></h2>
+<h2>Statement<a class="headerlink" href="#statement" title="Link to this heading"></a></h2>
 <p>Given a signed 32-bit integer <code class="docutils literal notranslate"><span class="pre">x</span></code>, return <code class="docutils literal notranslate"><span class="pre">x</span></code> with its digits reversed. If reversing <code class="docutils literal notranslate"><span class="pre">x</span></code> causes the value to go outside the signed 32-bit integer range <code class="docutils literal notranslate"><span class="pre">[-231,</span> <span class="pre">231</span> <span class="pre">-</span> <span class="pre">1]</span></code>, then return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>
 <p><strong>Example 1:</strong></p>
@@ -160,9 +173,15 @@ Output: 21
 </ul>
 </section>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading"></a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<h2>Solution<a class="headerlink" href="#solution" title="Link to this heading"></a></h2>
+<section id="intuition">
+<h3>Intuition<a class="headerlink" href="#intuition" title="Link to this heading"></a></h3>
+<p>Reverse the number and check if it is in the range.</p>
+</section>
+<section id="code">
+<h3>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 
         <span class="n">isnegative</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -176,10 +195,13 @@ Output: 21
 
         <span class="n">new_num</span> <span class="o">=</span> <span class="o">-</span><span class="n">new_num</span> <span class="k">if</span> <span class="n">isnegative</span> <span class="k">else</span> <span class="n">new_num</span>
 
-        <span class="k">if</span> <span class="n">new_num</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="ow">or</span> <span class="n">new_num</span> <span class="o">&gt;</span> <span class="mi">2147483647</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
-        <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">new_num</span>
+        <span class="k">if</span> <span class="n">new_num</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="ow">or</span> <span class="n">new_num</span> <span class="o">&gt;</span> <span class="mi">2147483647</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">new_num</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -187,7 +209,7 @@ Output: 21
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-          <a href="../index.html" class="btn btn-neutral float-left" title="Leetcode Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <a href="0001.html" class="btn btn-neutral float-left" title="1. Two Sums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
           <a href="0020.html" class="btn btn-neutral float-right" title="20. Valid Parentheses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       </div>
   

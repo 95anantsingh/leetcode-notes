@@ -3,19 +3,11 @@
 
 These are my personal notes for Leetcode, I documented these while taking classes at New York University.
 
-<!-- ```{note} 
-A more comprehensive but confusing 😛 guide is available [here](https://sites.google.com/nyu.edu/nyu-hpc).
-``` -->
-
-```{warning}
-This are not from Leetcode, follow these notes/solutions at your discretion.
-```
-
 ## Problems
 
 <!-- :hidden: -->
 <!-- :numbered: -->
-```{toctree} 
+```{toctree}
 ---
 hidden:
 ---

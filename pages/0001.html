@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>49. Group Anagrams &mdash; Leetcode Notes 1.0 documentation</title>
+  <title>1. Two Sums &mdash; Leetcode Notes 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=eb7ae292" />
 
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="202. Happy Number" href="0202.html" />
-    <link rel="prev" title="20. Valid Parentheses" href="0020.html" /> 
+    <link rel="next" title="7. Reverse Integer" href="0007.html" />
+    <link rel="prev" title="Leetcode Notes" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,11 +48,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Leetcode Notes</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="0001.html">1. Two Sums</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="0001.html#statement">Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0001.html#solution">Solution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="0001.html#intuition">Intuition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="0001.html#code">Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Two Sums</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
 </ul>
 </li>
 </ul>
@@ -77,13 +77,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">49. Group Anagrams</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#statement">Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#solution">Solution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#intuition">Intuition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#approach">Approach</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#complexity">Complexity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0049.html">49. Group Anagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0049.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0049.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#complexity">Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0049.html#code">Code</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +137,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">49. Group Anagrams</li>
+      <li class="breadcrumb-item active">1. Two Sums</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -146,63 +146,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="group-anagrams">
-<h1>49. Group Anagrams<a class="headerlink" href="#group-anagrams" title="Link to this heading"></a></h1>
+  <section id="two-sums">
+<h1>1. <a class="reference external" href="https://leetcode.com/problems/two-sum/">Two Sums</a><a class="headerlink" href="#two-sums" title="Link to this heading"></a></h1>
 <section id="statement">
 <h2>Statement<a class="headerlink" href="#statement" title="Link to this heading"></a></h2>
-<p>Given an array of strings <code class="docutils literal notranslate"><span class="pre">strs</span></code>, group <strong>the anagrams</strong> together. You can return the answer in <strong>any order</strong>.</p>
-<p>An <strong>Anagram</strong> is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
+<p>Given an array of integers <code class="docutils literal notranslate"><span class="pre">nums</span></code> and an integer <code class="docutils literal notranslate"><span class="pre">target</span></code>, return <em>indices of the two numbers</em> such that they add up to target.</p>
+<p>You may assume that each input would have <em><strong>exactly one solution</strong></em>, and you may not use the same element twice.</p>
+<p>You can return the answer in any order.</p>
 <p><strong>Example 1:</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]
-Output: [[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 </pre></div>
 </div>
 <p><strong>Example 2:</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: strs = [&quot;&quot;]
-Output: [[&quot;&quot;]]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: nums = [3,2,4], target = 6
+Output: [1,2]
 </pre></div>
 </div>
 <p><strong>Example 3:</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: strs = [&quot;a&quot;]
-Output: [[&quot;a&quot;]]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Input: nums = [3,3], target = 6
+Output: [0,1]
 </pre></div>
 </div>
 <p><strong>Constraints:</strong></p>
 <ul class="simple">
-<li><p>‘1 &lt;= strs.length &lt;= 10^4`</p></li>
-<li><p>‘0 &lt;= strs[i].length &lt;= 100`</p></li>
-<li><p>‘strs[i]` consists of lowercase English letters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">nums.length</span> <span class="pre">&lt;=</span> <span class="pre">10^4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-10^9</span> <span class="pre">&lt;=</span> <span class="pre">nums[i]</span> <span class="pre">&lt;=</span> <span class="pre">10^9</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-10^9</span> <span class="pre">&lt;=</span> <span class="pre">target</span> <span class="pre">&lt;=</span> <span class="pre">10^9</span></code></p></li>
+<li><p>Only one valid answer exists</p></li>
 </ul>
 </section>
 <section id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Link to this heading"></a></h2>
 <section id="intuition">
 <h3>Intuition<a class="headerlink" href="#intuition" title="Link to this heading"></a></h3>
-<p>Since the anagram can be in any order of alphabets, we need to sort them to keep track of an anagram. We need a dictionary of sorted words as key and anagrams as values.</p>
-</section>
-<section id="approach">
-<h3>Approach<a class="headerlink" href="#approach" title="Link to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>Loop over the strings and add each string to dictionary with sorted string as the key</p></li>
-<li><p>Return the values as list</p></li>
-</ol>
-</section>
-<section id="complexity">
-<h3>Complexity<a class="headerlink" href="#complexity" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Time complexity: <code class="docutils literal notranslate"><span class="pre">O(n*x*log(x))</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is average length of strings</p></li>
-<li><p>Space complexity: <code class="docutils literal notranslate"><span class="pre">O(n)</span></code></p></li>
-</ul>
+<p>Using a hash table to store the numbers and their indices.</p>
 </section>
 <section id="code">
 <h3>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">groupAnagrams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-        <span class="n">results</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
-            <span class="n">results</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">))]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">target</span><span class="o">-</span><span class="n">num</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">visited</span><span class="p">[</span><span class="n">target</span><span class="o">-</span><span class="n">num</span><span class="p">]]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">visited</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">idx</span>
 </pre></div>
 </div>
 </section>
@@ -213,8 +203,8 @@ Output: [[&quot;a&quot;]]
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-          <a href="0020.html" class="btn btn-neutral float-left" title="20. Valid Parentheses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-          <a href="0202.html" class="btn btn-neutral float-right" title="202. Happy Number" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <a href="../index.html" class="btn btn-neutral float-left" title="Leetcode Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <a href="0007.html" class="btn btn-neutral float-right" title="7. Reverse Integer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       </div>
   
     <hr/>

@@ -5,23 +5,27 @@
 Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
 
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
- 
 
 **Example 1:**
+
 ```text
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
 Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 ```
+
 **Example 2:**
+
 ```text
 Input: strs = [""]
-Output: [[""]]]
+Output: [[""]]
 ```
+
 **Example 3:**
+
 ```text
 Input: strs = ["a"]
 Output: [["a"]]
-``` 
+```
 
 **Constraints:**
 
@@ -37,10 +41,11 @@ Since the anagram can be in any order of alphabets, we need to sort them to keep
 
 ### Approach
 
-1. Loop over the strings and add each string to dictionary with sorted string as the key 
+1. Loop over the strings and add each string to dictionary with sorted string as the key
 1. Return the values as list
 
 ### Complexity
+
 - Time complexity: `O(n*x*log(x))`, where `x` is average length of strings
 - Space complexity: `O(n)`
 

@@ -12,6 +12,7 @@ Those numbers for which this process **ends in 1** are happy.
 Return `true` if `n` is a happy number, and `false` if not.
 
 **Example 1**:
+
 ```text
 Input: n = 19
 Output: true
@@ -23,37 +24,41 @@ Explanation:
 ```
 
 **Example 2:**
+
 ```text
 Input: n = 2
 Output: false
-``` 
+```
 
 **Constraints:**
 
 - `1 <= n <= 2^31 - 1`
 
 ## Solution
+
 ### Intuition
+
 Check the outputs for some integers. This is actually a mathematical loop. Take any positive integer n and sum the squares of its digits. If you repeat this operation, eventually you’ll either end at 1 or cycle between the eight values 4, 16, 37, 58, 89, 145, 42, and 20.
 
 ![loop](../assets/pages/square_digit_sum_cycle.png)
 
 ### Approach
+
 1. Calculate the sum of squared digits until its 4 or 1
 1. `return` `False` if its 4
 1. `return` `True` if its 1
 
-
 ### Complexity
+
 - Time complexity: `O(x*log(n))`, where `x` is iterations to reach 1 or 4
 - Space complexity: `O(1)`
 
-
 ### Code
+
 ```python
 class Solution:
     def isHappy(self, n: int) -> bool:
-        
+
         while n != 4:
             next_num = 0
             while n > 0:
@@ -62,6 +67,6 @@ class Solution:
             n = next_num
 
             if n == 1: return True
-            
+
         return False
 ```

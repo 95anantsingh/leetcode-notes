@@ -1,22 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1200. Minimum Absolute Difference &mdash; Leetcode Notes 1.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=eb7ae292" />
+
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,9 +47,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Leetcode Notes</a></li>
 </ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0001.html">1. Two Sums</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0001.html#statement">Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0001.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0001.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0001.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="0007.html">7. Reverse Integer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="0007.html#statement">Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="0007.html#solution">Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0007.html#solution">Solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="0007.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0007.html#code">Code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="0020.html">20. Valid Parentheses</a><ul>
@@ -133,9 +146,9 @@
            <div itemprop="articleBody">
              
   <section id="minimum-absolute-difference">
-<h1>1200. Minimum Absolute Difference<a class="headerlink" href="#minimum-absolute-difference" title="Permalink to this heading"></a></h1>
+<h1>1200. Minimum Absolute Difference<a class="headerlink" href="#minimum-absolute-difference" title="Link to this heading"></a></h1>
 <section id="statement">
-<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this heading"></a></h2>
+<h2>Statement<a class="headerlink" href="#statement" title="Link to this heading"></a></h2>
 <p>Given an array of <strong>distinct</strong> integers <code class="docutils literal notranslate"><span class="pre">arr</span></code>, find all pairs of elements with the minimum absolute difference of any two elements.</p>
 <p>Return a list of pairs in ascending order(with respect to pairs), each pair <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code> follows</p>
 <ul class="simple">
@@ -166,13 +179,13 @@ Output: [[-14,-10],[19,23],[23,27]]
 </ul>
 </section>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this heading"></a></h2>
+<h2>Solution<a class="headerlink" href="#solution" title="Link to this heading"></a></h2>
 <section id="intuition">
-<h3>Intuition<a class="headerlink" href="#intuition" title="Permalink to this heading"></a></h3>
+<h3>Intuition<a class="headerlink" href="#intuition" title="Link to this heading"></a></h3>
 <p>To reduce the time taken to find the minimum difference we have to sort the array first and then find the pairs easily.</p>
 </section>
 <section id="approach">
-<h3>Approach<a class="headerlink" href="#approach" title="Permalink to this heading"></a></h3>
+<h3>Approach<a class="headerlink" href="#approach" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Sort the array</p></li>
 <li><p>Find the minimum difference</p></li>
@@ -180,17 +193,17 @@ Output: [[-14,-10],[19,23],[23,27]]
 </ol>
 </section>
 <section id="complexity">
-<h3>Complexity<a class="headerlink" href="#complexity" title="Permalink to this heading"></a></h3>
+<h3>Complexity<a class="headerlink" href="#complexity" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Time complexity: <code class="docutils literal notranslate"><span class="pre">O(n*log(n))</span></code></p></li>
 <li><p>Space complexity: <code class="docutils literal notranslate"><span class="pre">O(x)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is number of pairs</p></li>
 </ul>
 </section>
 <section id="code">
-<h3>Code<a class="headerlink" href="#code" title="Permalink to this heading"></a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">minimumAbsDifference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+<h3>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">minimumAbsDifference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
         <span class="n">arr</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
         <span class="n">min_dif</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
 
